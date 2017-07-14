@@ -7,16 +7,16 @@ config = {
     debug: false,
 
     // 接收通知服务器API地址
-    pushStateAPI: 'https://www.xxx.net/paynotify', // 示例 https://www.xxx.net/paynotify
+    pushStateAPI: 'http://127.0.0.1/paynotify', // 示例 https://www.xxx.net/paynotify
 
     // 推送方的应用ID(本程序), 用于区分和辨别合法的发送方
-    pushAppId: '',
+    pushAppId: '123',
 
     // 推送方的应用密钥
-    pushAppKey: '',
+    pushAppKey: 'kaguya',
 
     // 服务器验证签名参数, 此密钥用于按既定签名算法生成签名
-    pushStateSecret: '',
+    pushStateSecret: 'kaguya',
 
     // 支付宝登录成功后的cookies, 用于请求订单列表页的身份验证(获取方式: 首先访问你的个人支付宝, 进入到https://consumeprod.alipay.com/record/advanced.htm订单列表页面, 使用chrome按F12打开调试工具, 进console选项卡, 输入document.cookie回车, 返回的字符串即为cookies, 复制全部, 不包含包含首尾双引号, 粘贴到此处双引号中)
     alipayCookies: "",

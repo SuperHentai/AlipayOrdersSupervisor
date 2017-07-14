@@ -12,6 +12,7 @@ var Push = (function(){
         // 签名
         var md5 = crypto.createHash('md5');
         var sig = [orderData.time.toString(), orderData.tradeNo.toString(), orderData.status.toString(), this.secret.toString()].join('|');
+        sig = new Buffer(sig).toString('base64');
         sig = md5.update(sig, 'utf8').digest('hex');
         // Post body
         orderData.sig = sig;
